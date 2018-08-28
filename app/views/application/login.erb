@@ -1,0 +1,7 @@
+ <link rel="stylesheet" href="/css/main.css">
+<%= form_tag("/login", method: "post") do %>
+  <input name="name" placeholder="Enter your name" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Enter your name'" class="common-input mt-10" required="" type="text"></br>
+  <input name="password" placeholder="Enter email password"  class="common-input mt-10" required="" type="password"></br>
+  <%= submit_tag "Log In",class: "primary-btn mt-20 lnr lnr-arrow-right" %>
+  
+<% end %>

@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+<html lang="zxx" class="no-js">
+<head>
+  <!-- Mobile Specific Meta -->
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <!-- Favicon-->
+  <link rel="shortcut icon" href="img/fav.png">
+  <!-- Author Meta -->
+  <meta name="author" content="codepixer">
+  <!-- Meta Description -->
+  <meta name="description" content="">
+  <!-- Meta Keyword -->
+  <meta name="keywords" content="">
+  <!-- meta character set -->
+  <meta charset="UTF-8">
+  <!-- Site Title -->
+  <title>Dfinity巴斯光年社区</title>
+
+  <link href="https://fonts.googleapis.com/css?family=Poppins:100,200,400,300,500,600,700" rel="stylesheet"> 
+    <!--
+    CSS
+    ============================================= -->
+    <link rel="stylesheet" href="/css/linearicons.css">
+    <link rel="stylesheet" href="/css/font-awesome.min.css">
+    <link rel="stylesheet" href="/css/bootstrap.css">
+    <link rel="stylesheet" href="/css/magnific-popup.css">
+    <link rel="stylesheet" href="/css/nice-select.css">
+    <link rel="stylesheet" href="/css/hexagons.min.css">										
+    <link rel="stylesheet" href="/css/animate.min.css">
+    <link rel="stylesheet" href="/css/owl.carousel.css">
+    <link rel="stylesheet" href="/css/main.css">
+  </head>
+  <body>
+
+    <header id="header" id="home">
+      <div class="container">
+        <div class="row align-items-center justify-content-between d-flex">
+          <div id="logo">
+            <a href="#home"><img src="img/logo.png" alt="" title="" /></a>
+          </div>
+          <nav id="nav-menu-container">
+            <ul class="nav-menu">
+               <li class="menu-active"><a href="#home">主页</a></li>
+              <li><a href="#contact">联系我们</a></li>
+              <li><a href="/en">English</a></li>
+              <!--<li class="menu-has-children"><a href="">Pages</a>
+                <ul>
+                  <li><a href="generic.html">Generic</a></li>
+                  <li><a href="elements.html">Elements</a></li>
+                </ul>
+              </li>-->
+            </ul>
+          </nav><!-- #nav-menu-container -->		    		
+        </div>
+      </div>
+    </header><!-- #header -->
+
+
+    <!-- start banner Area -->
+    <section class="banner-area relative" id="home">
+
+
+      <div class="overlay overlay-bg" id="bg_anim"></div>
+      
+      <div class="container">
+        <div class="row fullscreen d-flex align-items-center justify-content-start">
+          <div class="banner-content col-lg-9 col-md-12">
+            <h2 class="text-white text-uppercase">
+              To Dfinity and beyond!				
+            </h2>
+            <h1 class="text-white text-uppercase">
+             &nbsp				
+            </h1>
+            <h1 class="text-white text-uppercase">
+               &nbsp				
+            </h1>
+            <h1 class="text-white text-uppercase">
+               &nbsp				
+            </h1>
+            <p class="text-white">
+              Dfinity 巴斯光年社区是一群快乐的热爱区块链，热爱Dfinity的小伙伴共同学习一起玩耍的乐园！
+            </p>
+            <a href="#contact" class="primary-btn text-uppercase">加入我们！</a>
+          </div>											
+        </div>
+      </div>
+    </section>
+    <!-- End banner Area -->				
+
+    
+    <!-- Start quote Area -->
+    <!-- End quote Area -->
+
+    <!-- Start cat Area -->
+    <section class="cat-area section-gap" id="service">
+      <div class="container">							
+        <div class="row">
+          <div class="col-lg-4">	
+            <div class="single-cat d-flex flex-column">
+              <a href="#" class="hb-sm-margin mx-auto d-block"><span class="hb hb-sm inv hb-facebook-inv"><span class="lnr lnr-magic-wand"></span></span></a>
+              <h4 class="mt-40 mb-20">挖矿</h4>
+              <p>
+                 共建节点，共享收益
+              </p>
+            </div>															
+          </div>
+          <div class="col-lg-4">	
+            <div class="single-cat">
+              <a href="#" class="hb-sm-margin mx-auto d-block"><span class="hb hb-sm inv hb-facebook-inv"><span class="lnr lnr-rocket"></span></span></a>
+              <h4 class="mt-40 mb-20">交流</h4>
+              <p>
+                谈笑风生，提高姿势
+              </p>
+            </div>															
+          </div>
+          <div class="col-lg-4">
+            <div class="single-cat">
+              <a href="#" class="hb-sm-margin mx-auto d-block"><span class="hb hb-sm inv hb-facebook-inv"><span class="lnr lnr-bug"></span></span></a>
+              <h4 class="mt-40 mb-20">dAPP</h4>
+              <p>
+               编写合约，共建生态
+              </p>
+            </div>							
+          </div>
+        </div>
+      </div>	
+    </section>                    
+  
+    <!-- Start testomial Area -->
+  
+    <!-- End testomial Area -->			
+
+    <!-- Start contact Area -->
+    <section class="contact-area mb-20" id="contact">
+      <div class="container">
+        <div class="contact-section">
+          <div class="row align-items-center">
+            <div class="col-lg-4 contact-left">
+              <div style=" width:0%;height: 300px;" id="map"></div>
+            </div>
+            <div class="col-lg-7 contact-right">
+              <%= form_tag "/users",class: "contact-form text-right form-area", id: "myForm" do %>
+                <input name="user[name]" placeholder="Enter your name" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Enter your name'" class="common-input mt-10" required="" type="text">
+                <input name="user[email]" placeholder="Enter email address" pattern="[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{1,63}$" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Enter email address'" class="common-input mt-10" required="" type="email">
+                <textarea class="common-textarea mt-10" name="user[message]" placeholder="Messege" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Messege'" required=""></textarea>
+                <%= submit_tag "Send Message",class: "primary-btn mt-20 lnr lnr-arrow-right" %>
+                <div class="alert-msg">
+                </div>
+              <% end %>
+            </div>							
+          </div>
+        </div>
+      </div>	
+    </section>
+    <!-- End contact Area -->
+    
+    
+    <!-- start footer Area -->		
+    <footer class="footer-area section-gap">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-5 col-md-6 col-sm-6">
+            <div class="single-footer-widget">
+              <h6>关于我们</h6>
+              <p>
+                欢迎您与我们联系. <br/>邮箱：  dfinity_buzz@163.com
+              </p>
+              <p class="footer-text">
+                <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved |<i class="fa fa-heart-o" aria-hidden="true"></i> by <a>巴斯光年社区</a>
+<!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+              </p>								
+            </div>
+          </div>
+          <div class="col-lg-5  col-md-6 col-sm-6">
+         <!--    <div class="single-footer-widget">
+              <h6>订阅</h6>
+              <p>获取最新消息</p>
+              <div class="" id="mc_embed_signup">
+                <form target="_blank" novalidate="true" action="https://spondonit.us12.list-manage.com/subscribe/post?u=1462626880ade1ac87bd9c93a&amp;id=92a4423d01" method="get" class="form-inline">
+                  <input class="form-control" name="EMAIL" placeholder="输入邮箱" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Enter Email '" required="" type="email">
+                                  <button class="click-btn btn btn-default"><i class="fa fa-long-arrow-right" aria-hidden="true"></i></button>
+                                  <div style="position: absolute; left: -5000px;">
+                      <input name="b_36c4fd991d266f23781ded980_aefe40901a" tabindex="-1" value="" type="text">
+                    </div>
+
+                  <div class="info"></div>
+                </form>
+              </div>
+            </div> 	-->
+          </div>					
+          <div class="col-lg-2 col-md-6 col-sm-6 social-widget">
+            <div class="single-footer-widget">
+            <!--  <h6>关注我们</h6>
+              <p>我们的社交媒体</p>
+              <div class="footer-social d-flex align-items-center">
+                <a href="#"><i class="fa fa-facebook"></i></a>
+                <a href="#"><i class="fa fa-twitter"></i></a>
+                <a href="#"><i class="fa fa-dribbble"></i></a>
+                <a href="#"><i class="fa fa-behance"></i></a>
+              </div>-->
+            </div>
+          </div>							
+        </div>
+      </div>
+    </footer>	
+    <!-- End footer Area -->	
+
+    <script src="/js/vendor/jquery-2.2.4.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="/js/vendor/bootstrap.min.js"></script>			
+    <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBhOdIF3Y9382fqJYt5I_sswSrEw5eihAA"></script>
+      <script src="/js/easing.min.js"></script>			
+    <script src="/js/hoverIntent.js"></script>
+    <script src="/js/superfish.min.js"></script>	
+    <script src="/js/jquery.ajaxchimp.min.js"></script>
+    <script src="/js/jquery.magnific-popup.min.js"></script>	
+    <script src="/js/owl.carousel.min.js"></script>			
+    <script src="/js/jquery.sticky.js"></script>
+    <script src="/js/jquery.nice-select.min.js"></script>	
+    <script src="/js/hexagons.min.js"></script>					
+    <script src="/js/waypoints.min.js"></script>			
+    <script src="/js/jquery.counterup.min.js"></script>						
+  <!--    <script src="js/mail-script.js"></script>	-->	
+    <script src="/js/main.js"></script>	
+    
+<script type="text/javascript" src="/js/three.min.js"></script>
+<script type="text/javascript">
+var SEPARATION = 100, AMOUNTX = 50, AMOUNTY = 50;
+
+var container;
+var camera, scene, renderer;
+
+var particles, particle, count = 0;
+
+var mouseX = 0, mouseY = 0;
+
+var windowHalfX = window.innerWidth / 2;
+var windowHalfY = window.innerHeight / 2;
+
+init();
+animate();
+
+function init() {
+
+container = document.getElementById( 'bg_anim' );
+camera = new THREE.PerspectiveCamera( 75, window.innerWidth / window.innerHeight, 1, 10000 );
+camera.position.z = 1000;
+
+scene = new THREE.Scene();
+
+particles = new Array();
+
+var PI2 = Math.PI * 2;
+var material = new THREE.ParticleCanvasMaterial( {
+
+  color: 0xffffff,
+  program: function ( context ) {
+
+    context.beginPath();
+    context.arc( 0, 0, 1, 0, PI2, true );
+    context.fill();
+
+  }
+
+} );
+
+var i = 0;
+
+for ( var ix = 0; ix < AMOUNTX; ix ++ ) {
+
+  for ( var iy = 0; iy < AMOUNTY; iy ++ ) {
+
+    particle = particles[ i ++ ] = new THREE.Particle( material );
+    particle.position.x = ix * SEPARATION - ( ( AMOUNTX * SEPARATION ) / 2 );
+    particle.position.z = iy * SEPARATION - ( ( AMOUNTY * SEPARATION ) / 2 );
+    scene.add( particle );
+
+  }
+
+}
+
+renderer = new THREE.CanvasRenderer();
+renderer.setSize( window.innerWidth, window.innerHeight );
+container.appendChild( renderer.domElement );
+
+document.addEventListener( 'mousemove', onDocumentMouseMove, false );
+document.addEventListener( 'touchstart', onDocumentTouchStart, false );
+document.addEventListener( 'touchmove', onDocumentTouchMove, false );
+
+//
+
+window.addEventListener( 'resize', onWindowResize, false );
+
+}
+
+function onWindowResize() {
+
+windowHalfX = window.innerWidth / 2;
+windowHalfY = window.innerHeight / 2;
+
+camera.aspect = window.innerWidth / window.innerHeight;
+camera.updateProjectionMatrix();
+
+renderer.setSize( window.innerWidth, window.innerHeight );
+
+}
+
+//
+
+function onDocumentMouseMove( event ) {
+
+mouseX = event.clientX - windowHalfX;
+mouseY = event.clientY - windowHalfY;
+
+}
+
+function onDocumentTouchStart( event ) {
+
+if ( event.touches.length === 1 ) {
+
+  event.preventDefault();
+
+  mouseX = event.touches[ 0 ].pageX - windowHalfX;
+  mouseY = event.touches[ 0 ].pageY - windowHalfY;
+
+}
+
+}
+
+function onDocumentTouchMove( event ) {
+
+if ( event.touches.length === 1 ) {
+
+  event.preventDefault();
+
+  mouseX = event.touches[ 0 ].pageX - windowHalfX;
+  mouseY = event.touches[ 0 ].pageY - windowHalfY;
+
+}
+
+}
+
+//
+
+function animate() {
+
+requestAnimationFrame( animate );
+
+render();
+
+
+}
+
+function render() {
+
+camera.position.x += ( mouseX - camera.position.x ) * .05;
+camera.position.y += ( - mouseY - camera.position.y ) * .05;
+camera.lookAt( scene.position );
+
+var i = 0;
+
+for ( var ix = 0; ix < AMOUNTX; ix ++ ) {
+
+  for ( var iy = 0; iy < AMOUNTY; iy ++ ) {
+
+    particle = particles[ i++ ];
+    particle.position.y = ( Math.sin( ( ix + count ) * 0.3 ) * 50 ) + ( Math.sin( ( iy + count ) * 0.5 ) * 50 );
+    particle.scale.x = particle.scale.y = ( Math.sin( ( ix + count ) * 0.3 ) + 1 ) * 2 + ( Math.sin( ( iy + count ) * 0.5 ) + 1 ) * 2;
+
+  }
+
+}
+
+renderer.render( scene, camera );
+
+count += 0.1;
+
+}
+</script>
+  </body>
+</html>
+
+
+
