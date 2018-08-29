@@ -2276,6 +2276,29 @@ body.mobile-nav-active #mobile-nav-toggle {
 	background-size: cover
 }
 
+.share-banner-area {
+	background: url(../img/share.jpg) center;
+	background-size: cover
+}
+.dapp-banner-area {
+	background: url(../img/dapp.jpg) center;
+	background-size: cover
+}
+.mining-banner-area {
+	background: url(../img/mining.jpg) center;
+	background-size: cover
+}
+
+.share-banner-area .overlay-bg {
+	background: rgba(0,0,0,.80)
+}
+.dapp-banner-area .overlay-bg {
+	background: rgba(0,0,0,.80)
+}
+.mining-banner-area .overlay-bg {
+	background: rgba(0,0,0,.80)
+}
+
 .banner-area .overlay-bg {
 	background: rgba(0,0,0,.80)
 }

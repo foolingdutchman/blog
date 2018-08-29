@@ -1,26 +1,15 @@
-<!DOCTYPE html>
-<html>
-<head>
-<meta charset="UTF-8" />
-<title>Blog</title>
-<script src="/js/vendor/jquery-2.2.4.min.js"></script>
-<link rel="stylesheet" href="/stylesheets/style.css">
-<link rel="stylesheet" href="/css/main.css">
- <script src="/js/jquery.ajaxchimp.min.js"></script>
-
-</head>
-<body>
-
-<header>
-<h1>新文章</h1>
-</header>
-
+<%= render 'header' %>
 
 
 <form method="post" id='new_article'>
  
 <input type="text" class="common-input-article mt-10" name="title" id='title' /><br />
-    <div id="editor">
+文章类型：<br>
+<input type="radio" name="category" value="mining" checked> 挖矿
+<input type="radio" name="category" value="dapp"> dapp
+<input type="radio" name="category" value="share"> 分享<br>
+<br>
+  <div id="editor">
         <p>开始写作吧。。。</p>
     </div>
 
@@ -39,12 +28,13 @@
         // form submit event 
       form.on('submit', function(e) {
             e.preventDefault(); // prevent default form submit
-            token = $('meta[name=csrf-token]').attr('content')
+            token = $('meta[name=csrf-token]').attr('content');   
+            category= $("input[name='category']:checked").val(); 
             $.ajax({
                 url: '/articles', // form action url
                 type: 'POST', // form submit method get/post
                 dataType: 'html', // request type html/json/xml
-                data: {'article[title]': title.val(), 'article[body]': editor.txt.html() ,authenticity_token: token}, // serialize form data
+                data: {'article[title]': title.val(),'article[category]': category,'article[body]': editor.txt.html() ,'article[summary]': editor.txt.text()[0,150] ,authenticity_token: token}, // serialize form data
                 beforeSend: function() {
                 },
                 success: function(data) {

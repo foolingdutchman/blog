@@ -1,0 +1,63 @@
+<%= render 'header' %>
+    <!-- start banner Area -->
+    <section class="banner-area relative" id="home">
+      <div class="overlay overlay-bg" id="bg_anim"></div>
+      
+      <div class="container">
+        <div class="row fullscreen d-flex align-items-center justify-content-start">
+          <div class="banner-content col-lg-9 col-md-12">
+           <h1 class="text-white text-uppercase">
+             &nbsp				
+            </h1>
+            <h1 class="text-white text-uppercase">
+               &nbsp				
+            </h1>
+            <h2 class="text-white text-uppercase">
+              To Dfinity and beyond!				
+            </h2>
+           
+            <h1 class="text-white text-uppercase">
+               &nbsp				
+            </h1>
+            <p class="text-white">
+              Dfinity 巴斯光年社区是一群快乐的热爱区块链，热爱Dfinity的小伙伴共同学习一起玩耍的乐园！
+            </p>
+             <h1 class="text-white text-uppercase">
+               &nbsp				
+            </h1>
+          </div>											
+        </div>
+      </div>
+    </section>
+
+
+<p id="notice"><%= notice %></p>
+<div class="ibody">
+<h1>文章目录</h1>
+<article>
+<div class="bloglist">
+ <% @articles.each do |article| %>
+   <div class="blogs">
+        <h2> <%= link_to article.title, article %></h3>
+        <figure><img src="/img/t1.png" ></figure>
+        <ul>
+          <p><%= article.body[0,20] %></p>
+          <a href= <%"/articles/"+article.id.to_s  %> target="_blank" class="readmore">阅读更多</a>
+        </ul>
+        <p class="autor"><span>作者</span><span><%= article.author %></span>  <%= link_to 'Edit', edit_article_path(article) %></span> </span>   <%= link_to 'Destroy', article, method: :delete, data: { confirm: 'Are you sure?' } %></span></p>
+         <div class="dateview">2014-01-09</div>
+    </div>
+    <% end %>
+</div>
+</article>
+
+</div>
+
+
+
+
+<br>
+
+<%= link_to 'New User', new_article_path %>
+  </body>
+</html>

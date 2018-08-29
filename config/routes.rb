@@ -7,4 +7,7 @@ Rails.application.routes.draw do
   get "en" => "application#en"
   get "login" => 'application#login'
   post "login" => 'admin#login'
+  get "mining" => "articles#mining"
+  get "share" => "articles#share"
+  get "dapp"  => "articles#dapp"
 end
