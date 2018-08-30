@@ -7,7 +7,13 @@ class ArticlesController < ApplicationController
             @article.author = @admin.alias
             respond_to do |format|
                 if @article.save
-                    format.html { redirect_to @article, notice: 'article was successfully created.' }
+                    format.html do
+                        if request.xhr?
+                            render json: { article: @article }
+                        else
+                           redirect_to(@article, notice: 'article was successfully created.') and return 
+                        end
+                    end
                     format.json { render :show, status: :created, location: @article } 
                 else
                     format.html { render :new }
@@ -21,7 +27,13 @@ class ArticlesController < ApplicationController
     end
 
     def index
-        @articles = Article.all
+         if session[:admin]
+            @articles = Article.all 
+        else
+            session[:from]='/articles/new'
+            redirect_to '/login' 
+        end
+       
     end
 
     def mining
@@ -37,7 +49,14 @@ class ArticlesController < ApplicationController
     end
 
     def new
-        @article=Article.new
+        if session[:admin]
+           @article=Article.new  
+        else
+            session[:from]='/articles/new'
+            redirect_to '/login' 
+        end
+
+       
     end
 
     def show    

@@ -1,0 +1,41 @@
+<%= form_with(model: admin, local: true) do |form| %>
+  <% if admin.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(admin.errors.count, "error") %> prohibited this admin from being saved:</h2>
+
+      <ul>
+      <% admin.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+  <div class="container">
+  <div class="field">
+    <%= form.label :name %>
+     <input name="admin[name]" placeholder="Enter your name" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Enter your name'" class="common-input mt-10" required="" type="text">
+              
+  </div>
+  <div class="field">
+    <%= form.label :alias %>
+      <input name="admin[alias]" placeholder="Enter your alias" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Enter your alias'" class="common-input mt-10" required="" type="text">
+              
+  </div>
+  <div class="field">
+    <%= form.label :password %>
+      <input name="admin[password]" placeholder="Enter your name" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Enter your name'" class="common-input mt-10" required="" type="password">   
+  </div>
+
+  <div class="field">
+    <%= form.label :password_confirmation %>
+   <input name="admin[password_confirmation]" placeholder="Enter your password confirmation" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Enter your password confirmation'" class="common-input mt-10" required="" type="password">
+              
+  </div>
+
+  <div class="actions primary-btn mt-20 lnr lnr-arrow-right">
+    <%= form.submit %>
+  </div>
+  </div>
+
+  
+<% end %>

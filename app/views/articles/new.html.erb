@@ -1,21 +1,26 @@
-<%= render 'header' %>
+<%= render 'shared/admin_header' %>
 
-
-<form method="post" id='new_article'>
- 
-<input type="text" class="common-input-article mt-10" name="title" id='title' /><br />
-文章类型：<br>
-<input type="radio" name="category" value="mining" checked> 挖矿
-<input type="radio" name="category" value="dapp"> dapp
-<input type="radio" name="category" value="share"> 分享<br>
-<br>
-  <div id="editor">
+ <section class="banner-area relative footer-area section-gap">
+      <div class="overlay overlay-bg" id="bg_anim"></div>
+      <div class="container">
+      </div>
+    </section>
+<div class="container">
+ <form method="post" id='new_article'>
+    <input type="text" class="common-input-article mt-10" name="title" id='title' placeholder="Enter title" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Enter title'" required="" type="text"/><br />
+     文章类型：<br>
+     <input type="radio" name="category" value="mining" checked> 挖矿
+     <input type="radio" name="category" value="dapp"> dapp
+     <input type="radio" name="category" value="share"> 分享<br>
+     <br>
+      <div id="editor">
         <p>开始写作吧。。。</p>
-    </div>
+      </div>
 
     <!-- 注意， 只需要引用 JS，无需引用任何 CSS ！！！-->
     <script type="text/javascript" src="/js/wangEditor/release/wangEditor.min.js"></script>
      <script src="/js/alert-message.js"></script>
+     <input type="submit" class="primary-btn mt-20 lnr lnr-arrow-right" id='submit' value="提交" />
     <script type="text/javascript">
         var E = window.wangEditor
         var editor = new E('#editor')
@@ -51,8 +56,9 @@
         });
     });
     </script>
-      <input type="submit" class="primary-btn mt-20 lnr lnr-arrow-right" id='submit' value="提交" />
-    </form>
+      
+  </form>
+</div>
+<h1>&nbsp</h1>
    
-</body>
-</html>
+<%= render 'shared/admin_footer' %>

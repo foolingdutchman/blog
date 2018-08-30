@@ -1,0 +1,20 @@
+<article>
+<div class="bloglist">
+ <% @articles.each do |article| %>
+   <div class="blogs">
+        <h2> <%= link_to article.title, article %></h3>
+        <figure><img src="/img/t1.png" ></figure>
+        <ul>
+          <p><%= article.body[0,20] %></p>
+           <a class="readmore" href= <%= "/articles/"+article.id.to_s %> > 阅读更多</a>  
+          
+        </ul>
+        <p class="autor"><span>作者</span><span><%= article.author %></span> 
+        <span>编辑时间</span><span><%= article.updated_at %></span> 
+        <span> <%= link_to '编辑', edit_article_path(article) %></span>
+         </span>   <%= link_to '删除', article, method: :delete, data: { confirm: 'Are you sure?' } %></span></p>
+         <div class="dateview">2014-01-09</div>
+    </div>
+    <% end %>
+</div>
+</article>

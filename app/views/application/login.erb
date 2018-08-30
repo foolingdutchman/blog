@@ -1,7 +1,18 @@
- <link rel="stylesheet" href="/css/main.css">
-<%= form_tag("/login", method: "post") do %>
-  <input name="name" placeholder="Enter your name" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Enter your name'" class="common-input mt-10" required="" type="text"></br>
-  <input name="password" placeholder="Enter email password"  class="common-input mt-10" required="" type="password"></br>
-  <%= submit_tag "Log In",class: "primary-btn mt-20 lnr lnr-arrow-right" %>
-  
-<% end %>
+<%= render 'shared/header' %>
+<section class="banner-area relative footer-area section-gap">
+      <div class="overlay overlay-bg" id="bg_anim"></div>
+      <div class="container">
+      </div>
+    </section>
+    <h1>&nbsp</h1>
+    <div class="container login-dialog">
+     <%= form_tag("/login", method: "post") do %>
+      <input name="name" placeholder="Enter your name" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Enter your name'" class="common-input mt-10" required="" type="text"></br>
+      <input name="password" placeholder="Enter email password"  class="common-input mt-10" required="" type="password"></br>
+      <%= submit_tag "Log In",class: "primary-btn mt-20 lnr lnr-arrow-right article" %> 
+     <% end %>
+    </div>
+   
+
+<h1>&nbsp</h1>
+<%= render 'shared/footer' %>

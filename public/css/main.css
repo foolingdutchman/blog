@@ -2711,7 +2711,7 @@ body.mobile-nav-active #mobile-nav-toggle {
 .common-input-article {
 	border: 1px solid rgba(111,117,152,.3);
 	line-height: 48px;
-	width: 80%;
+	width: 100%;
 	display: block;
 	background: 0 0;
 	padding: 0 25px;
@@ -2772,6 +2772,10 @@ body.mobile-nav-active #mobile-nav-toggle {
 .footer-area {
 	padding-top: 100px;
 	background-color: #04091e
+}
+.top-banner-area {
+    padding-top: 100px;
+	padding: 120px 0
 }
 
 h6 {
@@ -2986,4 +2990,10 @@ h6 {
 
 .switch-wrap p {
 	margin: 0
+}
+
+.login-dialog{
+	width: 50%;
+	height: 50%;
+	align-content: center
 }
