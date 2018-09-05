@@ -122,6 +122,11 @@ a {
 	transition: all .3s ease 0s
 }
 
+img {
+	    max-width: 100%;
+		vertical-align: middle;
+}
+
 iframe {
 	border: 0
 }

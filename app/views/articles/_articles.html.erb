@@ -5,7 +5,7 @@
         <h2> <%= link_to article.title, article %></h3>
         <figure><img src="/img/t1.png" ></figure>
         <ul>
-          <p><%= article.body[0,20] %></p>
+          <p><%= article.summary %></p>
            <a class="readmore" href= <%= "/articles/"+article.id.to_s %> > 阅读更多</a>  
           
         </ul>
