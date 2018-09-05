@@ -49,9 +49,25 @@
     <script src="/js/hexagons.min.js"></script>					
     <script src="/js/waypoints.min.js"></script>			
     <script src="/js/jquery.counterup.min.js"></script>	
+       <script src="/js/language.js"></script>	
   </head>
-
   <body>
     <%= yield %>
+    <script type="text/javascript">
+    var update_lang = function(){
+        var lang_list = window.lang_list;
+        if(window.sessionStorage.getItem('lang')){
+            for( key in lang_list ){
+              $("#"+ key).html(lang_list[key][window.sessionStorage.getItem('lang')]);
+              }
+        } else {
+              for( key in lang_list ){
+              $("#"+ key).html(lang_list[key][0]);
+              }
+             window.sessionStorage.setItem('lang',0);
+       }
+    };
+    update_lang();
+    </script>
   </body>
 </html>

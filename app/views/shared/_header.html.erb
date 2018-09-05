@@ -6,10 +6,10 @@
       </div>
       <nav id="nav-menu-container">
         <ul class="nav-menu">
-            <li class="menu-active"><a href="/#home">主页</a></li>
-             <li><a href="/#service">内容</a></li>
-          <li><a href="/#contact">联系我们</a></li>
-          <li><a href="/en">English</a></li>
+            <li class="menu-active"><a id='home' href="/#home">主页</a></li>
+             <li><a id='content' href="/#service">内容</a></li>
+          <li><a id='contact' href="/#contact">联系我们</a></li>
+          <li><a id='lang' href="#">English</a></li>
           <!--<li class="menu-has-children"><a href="">Pages</a>
             <ul>
               <li><a href="generic.html">Generic</a></li>
@@ -20,6 +20,14 @@
       </nav><!-- #nav-menu-container -->		    		
     </div>
   </div>
+    <script type="text/javascript">
+    console.log($("#lang"));
+    $("#lang").click(function(e){
+      console.log(e);
+      window.sessionStorage.setItem('lang',window.sessionStorage.getItem('lang')==0?1:0);
+      update_lang();
+    })
+    </script>
 </header><!-- #header -->
 
    
