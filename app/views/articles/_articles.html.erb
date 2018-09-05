@@ -13,7 +13,7 @@
         <span>编辑时间</span><span><%= article.updated_at %></span> 
         <span> <%= link_to '编辑', edit_article_path(article) %></span>
          </span>   <%= link_to '删除', article, method: :delete, data: { confirm: 'Are you sure?' } %></span></p>
-         <div class="dateview">2014-01-09</div>
+         <div class="dateview"> <%= article.created_at.strftime("%Y/%m/%d") %></div>
     </div>
     <% end %>
 </div>

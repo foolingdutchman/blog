@@ -78,6 +78,7 @@ opacity:1;
 .blogs { margin: 20px 20px 20px 20px; position: relative; }
 .blogs h3 { font-size: 16px; font-weight: bold; margin-bottom: 15px; transition: all .5s }
 .blogs h3 a { color: #474645; }
+.blogs  a { color: #04091e; }
 .blogs h3:hover { text-decoration: underline }
 .blogs figure { float: left; width: 25%; overflow: hidden; }
 .blogs figure img { width: 50%; margin: auto; -moz-transition: all 0.5s; -webkit-transition: all 0.5s; -o-transition: all 0.5s; transition: all 0.5s; }
@@ -87,7 +88,7 @@ opacity:1;
 .autor { overflow: hidden; clear: both; margin: 10px 0 0 0; display: inline-block; line-height: 26px; height: 26px; color: #838383; background: #f6f6f6; width: 100% }
 .autor span { margin: 0 10px; }
 .autor span a { color: #759b08; }
-a.readmore { background: #e41635; color: #fff; padding: 5px 10px; float: right; margin: 20px 0 0 0 }
+a.readmore { background: #04091e; color: #fff; padding: 5px 10px; float: right; margin: 20px 0 0 0 }
 .blogs::before { content: ""; width: 10px; height: 10px; border-radius: 50%; position: absolute; background: #cac1c1; border: 2px solid #fff; left: -27px; -webkit-transition: all 1s; -moz-transition: all 1s; -o-transition: all 1s; transition: all 1s; }
 .blogs:hover::before { background: #474645 }
 .dateview { position: absolute; left: -125px; top: 0px; z-index: 1; color: #F5F5F5; }
