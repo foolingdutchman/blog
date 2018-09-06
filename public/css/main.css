@@ -171,9 +171,15 @@ h1,h2,h3,h4,h5,h6 {
 	font-weight: 600;
 	color: #222
 }
+h3 a {
+	color: #04091e !important;
+}
 
 .h1,h1 {
 	font-size: 36px
+}
+.article_icon {
+	max-width: 100px
 }
 
 .h2,h2 {

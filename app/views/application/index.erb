@@ -58,6 +58,36 @@
       </div>	
     </section>                    
   	
+ <!-- Start testomial Area -->
+			<section class="testomial-area section-gap" id="testimonail">
+				<div class="container">
+					<div class="row d-flex justify-content-center">
+						<div class="menu-content pb-60 col-lg-8">
+							<div class="title text-center">
+								<h1 class="mb-10" id='nesest_update'></h1>
+								<p></p>
+							</div>
+						</div>
+					</div>						
+					<div class="row">
+						<div class="active-tstimonial-carusel">
+          <% @articles.each do |article| %>
+             <div class="single-testimonial item">
+							<a href= <%= "/articles/"+article.id.to_s %>>	<img class="mx-auto article_icon"  src= <%= getIcon(article)  %> alt=""></a>
+						 	<p class="desc">
+                <%= article.summary %>
+								</p>
+							<a href= <%= "/articles/"+article.id.to_s %>>	<h4><%= article.title %></h4></a>
+								<p>
+									<%= article.author %>
+								</p>
+							</div>
+             <% end %>													
+						</div>
+					</div>
+				</div>	
+			</section>
+			<!-- End testomial Area -->	
 
     <!-- Start contact Area -->
     <section class="contact-area mb-20" id="contact">

@@ -1,5 +1,6 @@
 class ApplicationController < ActionController::Base
    def index
+       @articles = Article.limit(10) 
   end
    def en   
   end

@@ -78,7 +78,7 @@ opacity:1;
 .blogs { margin: 20px 20px 20px 20px; position: relative; }
 .blogs h3 { font-size: 16px; font-weight: bold; margin-bottom: 15px; transition: all .5s }
 .blogs h3 a { color: #474645; }
-.blogs  a { color: #04091e; }
+.blogs  h2 a { color: #04091e; }
 .blogs h3:hover { text-decoration: underline }
 .blogs figure { float: left; width: 25%; overflow: hidden; }
 .blogs figure img { width: 50%; margin: auto; -moz-transition: all 0.5s; -webkit-transition: all 0.5s; -o-transition: all 0.5s; transition: all 0.5s; }

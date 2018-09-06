@@ -24,5 +24,6 @@ mining_sub_title:['一起构建Dfinity 节点，参与挖矿，共享收益！',
 share_title:['信息分享，共同学习! ','Share and Learn together!'],
 share_sub_title:['在这里我们共同分享关于Dfinity 的最新进展和相关新闻！','Share newest updates and info of Dfinity.'],
 dapp_title:['DAPP开发!','DAPP DEVELOPMENT!'],
-dapp_sub_title:['一起来开发基于Dfinity的去中心化应用吧！','Let\'s develop Dapps on Dfinity!' ]
+dapp_sub_title:['一起来开发基于Dfinity的去中心化应用吧！','Let\'s develop Dapps on Dfinity!' ],
+nesest_update:['最近更新','The Newest Updates']
 };
