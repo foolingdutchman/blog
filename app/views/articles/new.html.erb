@@ -3,6 +3,7 @@
 <div class="container">
  <form method="post" id='new_article'>
     <input type="text" class="common-input-article mt-10" name="title" id='title' placeholder="Enter title" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Enter title'" required="" type="text"/><br />
+    <input type="text" class="common-textarea mt-10 mt-10" name="summary" id='summary' placeholder="Enter summary" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Enter summary'" required="" type="text"/><br />
      文章类型：<br>
      <input type="radio" name="category" value="mining" checked> 挖矿
      <input type="radio" name="category" value="dapp"> dapp
@@ -25,6 +26,7 @@
         var form = $('#new_article'); // contact form
         var title = $('#title'); // submit button
         var submit =$('#submit');
+        var summary=$('#summary');
         // form submit event 
       form.on('submit', function(e) {
             e.preventDefault(); // prevent default form submit
@@ -34,7 +36,7 @@
                 url: '/articles', // form action url
                 type: 'POST', // form submit method get/post
                 dataType: 'html', // request type html/json/xml
-                data: {'article[title]': title.val(),'article[category]': category,'article[body]': editor.txt.html() ,'article[summary]': editor.txt.text()[0,150] ,authenticity_token: token}, // serialize form data
+                data: {'article[title]': title.val(),'article[category]': category,'article[body]': editor.txt.html() ,'article[summary]': summary.val(),authenticity_token: token}, // serialize form data
                 beforeSend: function() {
                 },
                 success: function(data) {
