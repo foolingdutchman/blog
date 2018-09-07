@@ -8,7 +8,7 @@
         form.on('submit', function(e) {
             e.preventDefault(); // prevent default form submit
             $.ajax({
-                url: '/users', // form action url
+                url: '/messages', // form action url
                 type: 'POST', // forßm submit method get/post
                 dataType: 'html', // request type html/json/xml
                 data: form.serialize(), // serialize form data

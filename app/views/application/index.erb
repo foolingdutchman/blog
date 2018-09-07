@@ -98,10 +98,10 @@
               <div style=" width:0%;height: 300px;" id="map"></div>
             </div>
             <div class="col-lg-7 contact-right">
-              <%= form_tag "/users",class: "contact-form text-right form-area", id: "myForm" do %>
-                <input name="user[name]" placeholder="Enter your name" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Enter your name'" class="common-input mt-10" required="" type="text">
-                <input name="user[email]" placeholder="Enter email address" pattern="[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{1,63}$" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Enter email address'" class="common-input mt-10" required="" type="email">
-                <textarea class="common-textarea mt-10" name="user[message]" placeholder="Messege" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Messege'" required=""></textarea>
+              <%= form_tag "/messages",class: "contact-form text-right form-area", id: "myForm" do %>
+                <input name="message[name]" placeholder="Enter your name" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Enter your name'" class="common-input mt-10" required="" type="text">
+                <input name="message[email]" placeholder="Enter email address" pattern="[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{1,63}$" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Enter email address'" class="common-input mt-10" required="" type="email">
+                <textarea class="common-textarea mt-10" name="message[message]" placeholder="Messege" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Messege'" required=""></textarea>
                 <%= submit_tag "Send Message",class: "primary-btn mt-20 lnr lnr-arrow-right" %>
                 <div class="alert-msg">
                 </div>

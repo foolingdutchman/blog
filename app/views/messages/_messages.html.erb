@@ -1,0 +1,16 @@
+<article>
+<div class="bloglist">
+ <% @messages.each do |message| %>
+   <div class="blogs">
+        <h2> <%= link_to message.name, message %></h3>
+        <ul>
+          <p><%= message.message %></p>
+        </ul>
+        <p class="autor"><span>作者</span><span><%= message.email %></span> 
+        <span> <%= link_to '编辑', edit_article_path(message) %></span>
+         </span>   <%= link_to '删除', message, method: :delete, data: { confirm: 'Are you sure?' } %></span></p>
+         <div class="dateview"> <%= message.created_at.strftime("%Y/%m/%d") %></div>
+    </div>
+    <% end %>
+</div>
+</article>

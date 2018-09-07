@@ -1,0 +1,32 @@
+<%= render 'shared/header' %>
+    <section class="banner-area relative footer-area section-gap">
+      <div class="overlay overlay-bg" id="bg_anim"></div>
+      <div class="container">
+      </div>
+    </section>
+<p id="notice"><%= notice %></p>
+<div class="container">
+<h1 id='welcome_email' class='article'>
+</h1>
+<p class="autor article">
+
+<% if session[:admin] %>
+  <span>作者：</span><span><%= @message.name  %></span>  
+<span>邮箱：</span><span><%= @message.email  %></span>  
+<span>最新编辑时间：</span><span><%= @article.updated_at %></span> 
+<span>内容：</span><span><%= @message.message  %></span>  
+  <span><%= link_to '编辑', edit_article_path(@article) %></span>
+ </span><%= link_to '删除', @article, method: :delete, data: { confirm: 'Are you sure?' } %></span></p>
+<% else %>
+   <h3 id='welcome_email_greeting' class=''></h3>
+   <h1>&nbsp</h1>
+
+   <a href="/"><h4 id='back'></h4></a>
+  
+<% end %>
+
+</div>
+
+
+
+<%= render 'shared/footer' %>

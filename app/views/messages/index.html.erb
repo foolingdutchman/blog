@@ -1,0 +1,14 @@
+<%= render 'shared/admin_header' %>
+    <!-- start banner Area -->
+<div class='container'>
+<p id="notice"><%= notice %></p>
+<div class="ibody">
+<h1>文章目录</h1>
+<%= render 'messages' ,articles:@articles %>
+</div>
+<br>
+ <h3 class='bloglist'><%= link_to'新建文章', new_article_path %></h3>
+ <h1>&nbsp</h1>
+</div>
+
+<%= render 'shared/admin_footer' %>

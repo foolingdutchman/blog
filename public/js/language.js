@@ -25,5 +25,8 @@ share_title:['信息分享，共同学习! ','Share and Learn together!'],
 share_sub_title:['在这里我们共同分享关于Dfinity 的最新进展和相关新闻！','Share newest updates and info of Dfinity.'],
 dapp_title:['DAPP开发!','DAPP DEVELOPMENT!'],
 dapp_sub_title:['一起来开发基于Dfinity的去中心化应用吧！','Let\'s develop Dapps on Dfinity!' ],
-nesest_update:['最近更新','The Newest Updates']
+nesest_update:['最近更新','The Newest Updates'],
+welcome_email_greeting:['感谢你的支持，请保持持续关注！','Thanks so much for your support, and please keep in touch! '],
+welcome_email:['欢迎来信！','Welcome Your Letter!'],
+back:['返回','Back']
 };
